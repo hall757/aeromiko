@@ -12,7 +12,7 @@ Value ASSOC_TIME (\d{2,}:\d{2}:\d{2})
 Value VLAN (\d+)
 Value AUTH (Yes|No)
 Value UPID (\d+)
-Value PHYMODE (11[\w\/]+)
+Value PHYMODE (11[\w\/\-]+)
 Value LDPC (Yes|No)
 Value TX_STBC (Yes|No)
 Value RX_STBC (Yes|No)
@@ -23,5 +23,5 @@ Value RELEASE (Yes|No)
 Value STATION_STATE (.*)
 
 Start
-  ^\s*Ifname=${IFNAME}.*SSID=${SSID}:
-  ^\s*${MAC_ADDR}\s*${IP_ADDR}\s*${CHAN}\s*${TX_RATE}\s*${RX_RATE}\s*${POW_SNR}\s*${ASSOC_MODE}\s*${CIPHER}\s*${ASSOC_TIME}\s*${VLAN}\s*${AUTH}\s*${UPID}\s*${PHYMODE}\s*${LDPC}\s*${TX_STBC}\s*${RX_STBC}\s*${SM_PS}\s*${CHAN_WIDTH}(\s*${MUMIMO})?\s*${RELEASE}\s*${STATION_STATE} -> Record
+  ^\s*Ifname=${IFNAME},.*SSID=${SSID}:
+  ^\s*${MAC_ADDR}\s*${IP_ADDR}\s*${CHAN}\s*${TX_RATE}\s*${RX_RATE}\s*${POW_SNR}\s*${ASSOC_MODE}\s*${CIPHER}\s*${ASSOC_TIME}\s*${VLAN}\s*${AUTH}\s*

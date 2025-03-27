@@ -529,7 +529,7 @@ class AP:
             HW_AUTH_DEVICE_STATUS
             TPM_STATUS
         """
-        command = "show hw info"
+        command = "show hw-info"
         template = "show_hw_info.textfsm"
 
         command_response = self.send_command(command)
